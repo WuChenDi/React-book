@@ -2,7 +2,7 @@
 
 <ul>
   <li>初学<a href="https://vuejs.org/">Vue.js</a>所写的一个demo</li>
-  <li>访问地址https://WuChenDi.github.io/Vue-TaskList_demo</li>
+  <li>访问地址http://htmlpreview.github.io/?https://github.com/WuChenDi/Vue-TaskList_demo/blob/master/index.html</li>
 </ul>
 
 <ul>
