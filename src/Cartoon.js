@@ -6,7 +6,6 @@ class Cartoon extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      show: true,
       list: []
     };
     this.handleAddItem = this.handleAddItem.bind(this);
@@ -15,7 +14,6 @@ class Cartoon extends Component {
   render() {
     return (
       <Fragment>
-        {/* <div className={this.state.show ? "show" : "hide"}>hello</div> */}
         <TransitionGroup>
           {this.state.list.map((item, index) => {
             return (
@@ -41,7 +39,6 @@ class Cartoon extends Component {
 
   handleAddItem() {
     this.setState(prevState => ({
-      // show: !this.state.show
       list: [...prevState.list, "item"]
     }));
   }
