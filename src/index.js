@@ -1,14 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
 // import App from './App';
-// import TodoList from './TodoList';
-import Cartoon from './Cartoon';
-import * as serviceWorker from './serviceWorker';
+import TodoList from "./TodoList";
+import * as serviceWorker from "./serviceWorker";
 
 // ReactDOM.render(<App />, document.getElementById('root'));
-// ReactDOM.render(<TodoList />, document.getElementById('root'));
-ReactDOM.render(<Cartoon />, document.getElementById('root'));
+ReactDOM.render(<TodoList />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
