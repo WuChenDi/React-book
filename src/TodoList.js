@@ -8,7 +8,6 @@ import {
   initListAction
 } from "./store/actionCreators";
 import TodoListUI from "./TodoListUI";
-import axios from "axios";
 
 class TodoList extends Component {
   constructor(props) {
