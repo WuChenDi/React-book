@@ -18,7 +18,18 @@ export const getDeleteItemAction = index => ({
   type: DELETE_TODO_ITEM,
   index
 });
+
 export const initListAction = data => ({
   type: INIT_LIST_ACTION,
   data
 });
+
+export const getTodoList = () => {
+  return dispatch => {
+    setTimeout(() => {
+      const data = ["w", "c", "d"];
+      const action = initListAction(data);
+      dispatch(action);
+    }, 500);
+  };
+};

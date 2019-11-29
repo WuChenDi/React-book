@@ -5,7 +5,7 @@ import {
   getInputChangeAction,
   getAddItemAction,
   getDeleteItemAction,
-  initListAction
+  getTodoList
 } from "./store/actionCreators";
 import TodoListUI from "./TodoListUI";
 
@@ -34,13 +34,8 @@ class TodoList extends Component {
   }
 
   componentDidMount() {
-    // axios.get("./list.json").then(() => {});
-    setTimeout(() => {
-      const data = ["w", "c", "d"];
-      const action = initListAction(data);
-      console.log(action);
-      store.dispatch(action);
-    }, 1000);
+    const action = getTodoList();
+    store.dispatch(action);
   }
 
   handleInputChange(e) {
