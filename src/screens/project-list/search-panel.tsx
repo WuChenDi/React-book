@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export interface User {
   id: string;
@@ -6,6 +6,7 @@ export interface User {
   email: string;
   title: string;
   organization: string;
+  token: string
 }
 
 interface SearchPanelProps {
@@ -14,16 +15,16 @@ interface SearchPanelProps {
     name: string;
     personId: string;
   };
-  setParam: (param: SearchPanelProps['param']) => void;
+  setParam: (param: SearchPanelProps["param"]) => void;
 }
 
 export const SearchPanel = ({ users, param, setParam }: SearchPanelProps) => {
   return (
-    <form action=''>
+    <form action="">
       <div>
         {/*setParam(Object.assign({}, param, { name: evt.target.value() }));*/}
         <input
-          type='text'
+          type="text"
           value={param.name}
           onChange={evt =>
             setParam({
@@ -41,7 +42,7 @@ export const SearchPanel = ({ users, param, setParam }: SearchPanelProps) => {
             })
           }
         >
-          <option value={''}>负责人</option>
+          <option value={""}>负责人</option>
           {users.map(user => (
             <option key={user.id} value={user.id}>
               {user.name}
