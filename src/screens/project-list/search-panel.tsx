@@ -1,7 +1,8 @@
 import React from "react";
-import { Input, Select } from "antd";
+import { Form, Input, Select } from "antd";
 
-const {Option} = Select
+const { Option } = Select;
+const { Item } = Form;
 
 
 export interface User {
@@ -24,10 +25,11 @@ interface SearchPanelProps {
 
 export const SearchPanel = ({ users, param, setParam }: SearchPanelProps) => {
   return (
-    <form action="">
-      <div>
+    <Form layout={"inline"}>
+      <Item>
         {/*setParam(Object.assign({}, param, { name: evt.target.value() }));*/}
         <Input
+          placeholder={"项目名"}
           type="text"
           value={param.name}
           onChange={evt =>
@@ -37,6 +39,8 @@ export const SearchPanel = ({ users, param, setParam }: SearchPanelProps) => {
             })
           }
         />
+      </Item>
+      <Item>
         <Select
           value={param.personId}
           onChange={value =>
@@ -53,7 +57,7 @@ export const SearchPanel = ({ users, param, setParam }: SearchPanelProps) => {
             </Option>
           ))}
         </Select>
-      </div>
-    </form>
+      </Item>
+    </Form>
   );
 };
